@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdir my_dir
+chmod +x 12-create_my_dir
