@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# This script makes up a story based on /etc/passwd content
+# Display /etc/passwd content in the specified format using while loop + IFS
 
-while IFS=':' read -r username password uid gid info home shell; do
-  echo "The user $username is part of the $gid gang, lives in $home and rides $shell. USER ID's place is protected by the passcode $password, more info about the user here: $info"
+while IFS=':' read -r username password userid groupid user_info homedir shell; do
+    echo "The user $username is part of the $groupid gang, lives in $homedir and rides $shell. USER ID's place is protected by the passcode $password, more info about the user here: $user_info"
 done < /etc/passwd
-
